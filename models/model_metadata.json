@@ -1,0 +1,21 @@
+{
+    "model_version": "1.0.0",
+    "last_trained": "2026-08-30 17:41:45",
+    "training_dataset_size": 5000,
+    "train_samples": 4000,
+    "test_samples": 1000,
+    "metrics": {
+        "classification": {
+            "accuracy": 0.863,
+            "precision": 0.8785,
+            "recall": 0.9327,
+            "f1_score": 0.9048,
+            "roc_auc": 0.9021
+        },
+        "regression": {
+            "mae_days": 97.81,
+            "rmse_days": 145.77,
+            "r2_score": 0.5912
+        }
+    }
+}
