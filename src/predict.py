@@ -28,13 +28,45 @@ def get_risk_category(risk_score):
     else:
         return "CRITICAL", "🔴"
 
+from preprocessing import CATEGORICAL_FEATURES, NUMERICAL_FEATURES
+
 def predict_project_risk(project_df, classifier, regressor, preprocessor):
     """
     Predicts the delay probability and expected delay for a dataframe of projects.
     Returns the dataframe with predicted fields added.
     """
+    # Ensure all required features are present with alias fallback
+    df_copy = project_df.copy()
+    
+    if "land_area_ha" not in df_copy.columns and "land_area_acres" in df_copy.columns:
+        df_copy["land_area_ha"] = df_copy["land_area_acres"] * 0.404686
+    if "documentation_pct" not in df_copy.columns and "documentation_completion_pct" in df_copy.columns:
+        df_copy["documentation_pct"] = df_copy["documentation_completion_pct"]
+    if "compensation_pct" not in df_copy.columns and "compensation_paid_pct" in df_copy.columns:
+        df_copy["compensation_pct"] = df_copy["compensation_paid_pct"]
+    if "legal_cases" not in df_copy.columns and "legal_disputes" in df_copy.columns:
+        df_copy["legal_cases"] = df_copy["legal_disputes"]
+    if "court_stay" not in df_copy.columns:
+        df_copy["court_stay"] = 0
+    if "compensation_delay_days" not in df_copy.columns:
+        df_copy["compensation_delay_days"] = 0
+    if "stakeholder_delay_days" not in df_copy.columns:
+        df_copy["stakeholder_delay_days"] = 0
+    if "historical_delay_rate" not in df_copy.columns and "historical_district_delay_rate" in df_copy.columns:
+        df_copy["historical_delay_rate"] = df_copy["historical_district_delay_rate"]
+    if "planned_days" not in df_copy.columns and "planned_duration_days" in df_copy.columns:
+        df_copy["planned_days"] = df_copy["planned_duration_days"]
+        
+    for col in NUMERICAL_FEATURES:
+        if col not in df_copy.columns:
+            df_copy[col] = 0.0
+            
+    for col in CATEGORICAL_FEATURES:
+        if col not in df_copy.columns:
+            df_copy[col] = "Unknown"
+            
     # Transform features
-    X_processed = preprocessor.transform(project_df)
+    X_processed = preprocessor.transform(df_copy)
     
     # Predict delay probability
     prob = classifier.predict_proba(X_processed)[:, 1]
