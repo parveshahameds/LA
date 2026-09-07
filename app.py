@@ -16,6 +16,8 @@ from src.predict import load_ml_artifacts, predict_project_risk, calculate_stage
 from src.explain import explain_prediction
 from src.recommendations import generate_recommendations
 from src.simulator import simulate_intervention
+from src.data_generator import generate_and_save_data
+from src.train import train_and_evaluate
 
 # Configure page settings
 st.set_page_config(
@@ -74,8 +76,7 @@ st.markdown("""
 def load_datasets():
     if not os.path.exists("data/historical_projects.csv") or not os.path.exists("data/current_projects.csv"):
         # Run data generator if files are missing
-        import subprocess
-        subprocess.run(["python3", "src/data_generator.py"])
+        generate_and_save_data()
         
     hist_df = pd.read_csv("data/historical_projects.csv")
     curr_df = pd.read_csv("data/current_projects.csv")
@@ -98,9 +99,8 @@ try:
 except Exception as e:
     model_loaded = False
     st.warning("Models not trained yet or loading failed. Retraining now...")
-    import subprocess
-    subprocess.run(["python3", "src/data_generator.py"])
-    subprocess.run(["python3", "src/train.py"])
+    generate_and_save_data()
+    train_and_evaluate()
     try:
         classifier, regressor, preprocessor = load_ml_artifacts()
         model_loaded = True
@@ -711,11 +711,10 @@ if model_loaded:
         
         if retrain_btn:
             with st.spinner("Executing model pipeline (regenerating data and retraining)..."):
-                import subprocess
                 start_time = datetime.now()
-                # Run scripts
-                subprocess.run(["python3", "src/data_generator.py"])
-                subprocess.run(["python3", "src/train.py"])
+                # Run generation and training directly
+                generate_and_save_data()
+                train_and_evaluate()
                 
                 # Reload artifacts and clear cache
                 st.cache_data.clear()
@@ -730,7 +729,10 @@ if model_loaded:
                 
                 elapsed = (datetime.now() - start_time).total_seconds()
                 st.success(f"Model successfully retrained and cached in {elapsed:.2f} seconds!")
-                st.experimental_rerun()
+                if hasattr(st, "rerun"):
+                    st.rerun()
+                else:
+                    st.experimental_rerun()
                 
         st.markdown("<p style='font-size:0.8rem; font-style:italic; margin-top:2rem;'>Prototype continuous-learning simulation.</p>", unsafe_allow_html=True)
         
