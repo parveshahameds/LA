@@ -1,0 +1,201 @@
+project_id,state,district,project_type,land_area_ha,affected_families,pending_approvals,approval_delay_days,documentation_pct,legal_cases,court_stay,compensation_pct,compensation_delay_days,possession_pct,rr_progress_pct,stakeholder_delay_days,historical_delay_rate,planned_days,actual_days,delay_days,delay_stage,delay_reason,delayed,risk_score,risk_level
+LA1001,Odisha,Nayagarh,Industrial Corridor,137.1,205,0,57,100.0,0,0,97.5,0,89.1,73.8,2,0.03,317,332,15,None,None,0,20.2,Low
+LA1002,Kerala,Thrissur,Railway,63.2,186,1,38,78.0,0,0,100.0,0,100.0,94.8,4,0.531,218,226,8,None,None,0,64.5,Medium
+LA1003,Bihar,Araria,Highway,83.5,187,2,41,83.4,2,0,55.6,67,65.8,76.9,22,0.292,199,346,147,Approval,Pending Approval,1,95.2,High
+LA1004,Kerala,Thrissur,Metro,85.9,118,4,94,45.8,0,0,98.3,0,100.0,100.0,21,0.333,341,544,203,Notification,Documentation,1,91.4,High
+LA1005,Maharashtra,Nashik,Expressway,54.4,116,2,40,71.3,3,0,72.4,25,58.2,58.6,7,0.185,484,664,180,Possession,Legal Dispute,1,98.0,High
+LA1006,Odisha,Khordha,Highway,228.6,616,2,71,77.9,2,0,71.7,36,71.2,75.4,20,0.397,244,403,159,Notification,Documentation,1,97.6,High
+LA1007,Odisha,Nayagarh,Industrial Corridor,118.9,437,2,0,98.7,1,0,89.9,13,93.9,90.0,19,0.23,376,493,117,Approval,Pending Approval,1,46.2,Medium
+LA1008,Uttar Pradesh,Lucknow,Industrial Corridor,47.4,121,2,23,80.0,1,0,78.3,42,91.6,94.1,2,0.56,363,363,0,None,None,0,82.1,High
+LA1009,Tamil Nadu,Salem,Metro,70.6,183,2,59,79.9,4,0,80.9,58,97.6,75.5,14,0.447,238,387,149,Notification,Documentation,1,95.2,High
+LA1010,Bihar,Supaul,Highway,120.6,235,1,75,76.7,0,0,88.9,0,96.8,88.8,7,0.314,264,271,7,None,None,0,61.3,Medium
+LA1011,Tamil Nadu,Salem,Highway,113.3,231,3,18,72.1,2,0,88.6,0,52.8,32.4,25,0.593,194,384,190,R&R,R&R Bottleneck,1,100.0,High
+LA1012,Andhra Pradesh,Krishna,Metro,95.2,143,0,10,81.2,0,0,82.0,34,91.6,77.9,1,0.197,365,536,171,R&R,R&R Bottleneck,1,75.0,High
+LA1013,Odisha,Nayagarh,Highway,137.1,389,2,50,86.9,3,0,81.1,16,78.4,89.3,14,0.206,404,539,135,Notification,Documentation,1,84.6,High
+LA1014,Uttar Pradesh,Kanpur,Expressway,88.8,194,4,74,80.3,0,0,98.2,2,100.0,85.6,27,0.175,335,342,7,None,None,0,68.2,Medium
+LA1015,Andhra Pradesh,Guntur,Highway,197.0,671,2,21,73.0,3,0,79.9,35,95.6,82.8,19,0.27,491,493,2,None,None,0,78.3,High
+LA1016,Telangana,Hyderabad,Railway,74.0,184,0,23,100.0,3,0,91.6,5,92.9,89.2,18,0.329,317,511,194,Compensation,Compensation Delay,1,86.6,High
+LA1017,Uttar Pradesh,Lucknow,Highway,373.7,705,1,18,94.3,0,0,58.8,59,88.8,100.0,7,0.122,219,225,6,None,None,0,86.8,High
+LA1018,Tamil Nadu,Coimbatore,Industrial Corridor,109.1,242,4,47,70.9,8,0,69.2,18,61.8,75.9,39,0.174,377,636,259,Compensation,Compensation Delay,1,100.0,High
+LA1019,Uttar Pradesh,Lucknow,Highway,237.0,398,0,43,70.7,3,0,100.0,0,100.0,100.0,14,0.204,364,460,96,Notification,Documentation,1,75.3,High
+LA1020,Kerala,Ernakulam,Highway,114.2,180,2,27,70.1,1,0,91.6,2,76.9,70.0,8,0.294,288,300,12,None,None,0,77.7,High
+LA1021,Tamil Nadu,Madurai,Highway,63.1,160,2,20,88.5,3,0,65.2,69,19.9,5.0,11,0.243,279,524,245,R&R,R&R Bottleneck,1,100.0,High
+LA1022,Kerala,Ernakulam,Railway,94.7,272,2,29,71.2,4,0,57.3,49,45.5,32.3,14,0.245,120,298,178,R&R,R&R Bottleneck,1,96.5,High
+LA1023,Maharashtra,Pune,Expressway,56.2,176,3,48,69.4,2,0,90.6,4,81.7,49.3,25,0.108,348,548,200,R&R,R&R Bottleneck,1,84.7,High
+LA1024,Tamil Nadu,Madurai,Metro,127.0,318,1,67,85.7,1,0,85.3,26,100.0,92.8,13,0.15,424,619,195,Notification,Documentation,1,85.4,High
+LA1025,Uttar Pradesh,Kanpur,Expressway,23.9,59,2,25,83.3,4,0,74.7,35,75.8,55.1,16,0.237,311,517,206,R&R,R&R Bottleneck,1,90.9,High
+LA1026,Maharashtra,Nashik,Metro,261.7,347,2,47,80.6,2,0,100.0,21,100.0,100.0,27,0.152,448,592,144,Notification,Documentation,1,78.6,High
+LA1027,Bihar,Araria,Railway,197.0,433,0,38,84.7,1,0,76.9,22,90.1,66.1,4,0.045,417,612,195,Notification,Documentation,1,82.3,High
+LA1028,Telangana,Warangal,Railway,155.5,447,0,23,86.1,1,0,88.7,3,100.0,82.9,5,0.329,377,473,96,Notification,Documentation,1,64.8,Medium
+LA1029,Odisha,Khordha,Highway,83.5,134,0,27,100.0,0,0,69.4,35,93.5,40.8,16,0.704,210,349,139,R&R,R&R Bottleneck,1,78.9,High
+LA1030,Karnataka,Belagavi,Metro,143.9,152,0,0,82.8,2,0,89.3,26,70.3,69.5,12,0.616,181,345,164,R&R,R&R Bottleneck,1,100.0,High
+LA1031,Madhya Pradesh,Indore,Highway,32.7,98,2,61,82.1,1,0,82.5,22,98.2,95.3,17,0.219,216,335,119,Notification,Documentation,1,86.3,High
+LA1032,Odisha,Khordha,Highway,31.2,86,2,60,96.2,2,0,100.0,0,75.5,59.3,17,0.42,297,466,169,Notification,Documentation,1,58.9,Medium
+LA1033,Odisha,Nayagarh,Railway,348.2,1392,1,29,78.2,2,0,83.8,15,83.7,81.9,11,0.546,419,610,191,Notification,Documentation,1,84.8,High
+LA1034,Kerala,Ernakulam,Highway,85.8,136,5,97,63.5,1,0,93.5,21,93.6,96.6,23,0.437,210,401,191,Notification,Documentation,1,96.1,High
+LA1035,Bihar,Araria,Metro,79.7,217,2,38,82.7,1,0,97.3,4,100.0,85.7,25,0.618,315,462,147,Notification,Documentation,1,96.8,High
+LA1036,Kerala,Ernakulam,Highway,46.8,81,0,0,68.7,4,0,59.9,67,48.5,42.6,17,0.305,419,599,180,R&R,R&R Bottleneck,1,92.4,High
+LA1037,Kerala,Thrissur,Highway,62.7,74,4,103,66.3,1,0,75.7,41,76.9,44.6,32,0.559,429,628,199,Notification,Documentation,1,97.1,High
+LA1038,Bihar,Araria,Highway,96.4,176,2,63,69.4,0,0,85.8,37,100.0,85.4,11,0.62,415,634,219,Notification,Documentation,1,97.0,High
+LA1039,Uttar Pradesh,Lucknow,Metro,143.3,426,1,27,75.7,2,0,82.4,43,81.5,77.3,4,0.248,388,404,16,None,None,0,90.2,High
+LA1040,Andhra Pradesh,Guntur,Expressway,35.3,54,2,64,89.8,1,0,100.0,0,70.7,90.6,23,0.16,359,372,13,None,None,0,81.7,High
+LA1041,Maharashtra,Nashik,Highway,65.3,246,1,45,86.4,4,0,95.5,0,75.0,81.5,18,0.183,182,286,104,Notification,Documentation,1,77.1,High
+LA1042,Madhya Pradesh,Indore,Highway,76.2,188,0,60,100.0,2,0,88.7,0,99.0,63.1,13,0.141,322,333,11,None,None,0,79.5,High
+LA1043,Kerala,Thrissur,Highway,122.1,162,1,3,83.1,3,0,95.3,7,67.1,42.2,21,0.312,379,578,199,R&R,R&R Bottleneck,1,84.0,High
+LA1044,Bihar,Araria,Metro,157.5,561,2,50,89.5,4,0,68.2,33,55.1,57.7,22,0.072,354,537,183,Notification,Documentation,1,93.3,High
+LA1045,Tamil Nadu,Madurai,Railway,103.3,390,3,25,96.0,5,0,88.0,18,86.5,58.9,32,0.33,393,556,163,Compensation,Compensation Delay,1,93.0,High
+LA1046,Bihar,Supaul,Highway,70.7,204,0,32,87.1,2,0,75.0,38,70.2,73.8,11,0.116,500,708,208,Notification,Documentation,1,97.3,High
+LA1047,Andhra Pradesh,Guntur,Expressway,199.3,713,2,40,74.5,0,0,96.9,4,100.0,93.5,15,0.044,414,451,37,Notification,Documentation,1,68.5,Medium
+LA1048,Maharashtra,Nashik,Industrial Corridor,117.0,391,0,37,79.9,1,0,82.5,22,91.2,76.9,12,0.283,380,610,230,Notification,Documentation,1,88.4,High
+LA1049,Uttar Pradesh,Lucknow,Highway,43.7,165,4,98,59.7,5,0,73.4,34,45.9,15.0,37,0.281,331,554,223,Notification,Documentation,1,93.2,High
+LA1050,Madhya Pradesh,Bhopal,Railway,57.7,146,0,0,72.7,3,0,90.2,21,80.2,82.3,10,0.554,354,507,153,Compensation,Compensation Delay,1,95.4,High
+LA1051,Karnataka,Bengaluru Rural,Highway,32.4,75,0,36,78.3,1,0,75.0,37,47.5,50.4,9,0.408,372,573,201,Possession,Legal Dispute,1,95.7,High
+LA1052,Uttar Pradesh,Lucknow,Metro,116.8,270,3,44,84.9,3,0,67.5,76,42.5,43.1,25,0.227,543,680,137,Possession,Legal Dispute,1,99.7,High
+LA1053,Kerala,Ernakulam,Metro,89.9,206,4,78,66.7,2,0,73.3,18,58.9,31.9,23,0.205,442,657,215,Notification,Documentation,1,95.3,High
+LA1054,Telangana,Warangal,Industrial Corridor,40.4,125,3,72,76.8,2,0,68.3,42,89.6,79.1,29,0.175,330,537,207,Notification,Documentation,1,100.0,High
+LA1055,Karnataka,Belagavi,Expressway,116.2,342,1,20,72.3,2,0,100.0,0,99.1,92.4,16,0.463,120,321,201,Notification,Documentation,1,99.5,High
+LA1056,Kerala,Thrissur,Highway,106.6,385,1,26,78.6,5,0,60.6,56,55.2,48.1,20,0.32,120,271,151,R&R,R&R Bottleneck,1,97.5,High
+LA1057,Telangana,Warangal,Highway,135.8,405,1,20,83.4,1,0,75.5,25,67.6,49.9,15,0.17,365,377,12,None,None,0,50.4,Medium
+LA1058,Andhra Pradesh,Krishna,Highway,165.2,510,2,39,68.4,2,0,100.0,0,100.0,100.0,20,0.097,483,485,2,None,None,0,28.0,Low
+LA1059,Andhra Pradesh,Krishna,Highway,89.7,337,1,45,96.1,3,0,84.4,8,75.2,63.4,14,0.289,509,514,5,None,None,0,52.6,Medium
+LA1060,Andhra Pradesh,Krishna,Industrial Corridor,82.7,200,0,48,93.8,0,0,86.2,9,73.9,28.0,1,0.087,349,497,148,R&R,R&R Bottleneck,1,70.8,High
+LA1061,Uttar Pradesh,Kanpur,Railway,83.4,322,1,13,83.3,4,0,65.6,47,71.4,28.1,8,0.199,421,434,13,None,None,0,81.3,High
+LA1062,Andhra Pradesh,Guntur,Highway,30.6,126,2,44,76.4,2,0,73.9,38,60.3,60.2,16,0.453,170,405,235,Notification,Documentation,1,100.0,High
+LA1063,Andhra Pradesh,Guntur,Highway,102.8,286,3,65,74.0,4,0,63.2,71,81.4,100.0,23,0.236,488,714,226,Notification,Documentation,1,96.5,High
+LA1064,Maharashtra,Nashik,Expressway,48.8,82,0,15,83.9,3,0,71.9,41,77.6,54.7,11,0.196,372,524,152,R&R,R&R Bottleneck,1,73.1,High
+LA1065,Kerala,Thrissur,Highway,65.3,90,2,65,88.8,1,0,83.1,58,89.8,67.8,18,0.435,412,572,160,Notification,Documentation,1,92.1,High
+LA1066,Andhra Pradesh,Krishna,Expressway,42.1,60,0,0,87.7,3,0,100.0,0,98.8,100.0,20,0.269,340,433,93,Compensation,Compensation Delay,1,55.1,Medium
+LA1067,Telangana,Warangal,Highway,178.5,376,2,92,87.9,1,0,70.6,34,83.4,87.2,19,0.121,272,460,188,Notification,Documentation,1,93.4,High
+LA1068,Uttar Pradesh,Lucknow,Highway,68.2,122,3,48,80.3,0,0,96.4,10,100.0,93.5,12,0.109,315,502,187,Notification,Documentation,1,93.4,High
+LA1069,Bihar,Supaul,Railway,79.9,93,1,66,76.9,3,0,72.3,30,74.5,75.2,14,0.327,257,420,163,Notification,Documentation,1,98.0,High
+LA1070,Kerala,Ernakulam,Industrial Corridor,96.9,185,4,40,72.7,1,0,96.8,0,100.0,89.0,19,0.12,367,375,8,None,None,0,85.0,High
+LA1071,Andhra Pradesh,Krishna,Metro,41.6,43,4,66,63.9,4,0,86.9,38,77.0,33.8,20,0.454,457,624,167,R&R,R&R Bottleneck,1,98.2,High
+LA1072,Uttar Pradesh,Lucknow,Railway,147.9,441,2,75,80.4,1,0,86.0,37,66.1,53.9,19,0.149,152,351,199,Notification,Documentation,1,97.0,High
+LA1073,Tamil Nadu,Madurai,Expressway,157.4,157,1,43,70.9,1,0,75.3,53,67.3,55.5,12,0.214,424,610,186,R&R,R&R Bottleneck,1,98.6,High
+LA1074,Uttar Pradesh,Lucknow,Metro,376.0,917,1,47,82.8,0,0,82.7,0,91.2,99.6,5,0.167,233,243,10,None,None,0,26.2,Low
+LA1075,Tamil Nadu,Salem,Highway,94.2,113,2,73,89.8,4,0,85.5,42,71.9,82.8,20,0.681,253,430,177,Notification,Documentation,1,96.5,High
+LA1076,Kerala,Thrissur,Highway,78.7,326,1,0,85.1,2,0,75.0,9,29.5,14.4,29,0.335,397,497,100,R&R,R&R Bottleneck,1,93.2,High
+LA1077,Madhya Pradesh,Indore,Highway,154.3,294,4,59,69.1,2,0,83.7,44,68.4,69.6,28,0.526,454,627,173,Notification,Documentation,1,100.0,High
+LA1078,Maharashtra,Nashik,Expressway,58.2,169,3,65,70.7,5,0,98.6,9,71.4,70.2,34,0.266,344,503,159,Notification,Documentation,1,96.7,High
+LA1079,Uttar Pradesh,Lucknow,Expressway,80.7,300,1,21,95.2,2,0,84.0,55,57.9,46.4,15,0.233,225,396,171,R&R,R&R Bottleneck,1,94.7,High
+LA1080,Madhya Pradesh,Bhopal,Highway,119.5,158,4,101,72.3,1,0,90.3,0,65.1,45.0,18,0.126,312,455,143,Notification,Documentation,1,74.2,High
+LA1081,Maharashtra,Pune,Highway,127.0,189,4,27,61.4,1,0,70.9,17,55.1,51.2,25,0.634,342,568,226,R&R,R&R Bottleneck,1,100.0,High
+LA1082,Madhya Pradesh,Indore,Highway,66.5,167,1,33,86.7,2,0,100.0,4,90.5,96.7,11,0.323,169,346,177,Notification,Documentation,1,78.7,High
+LA1083,Uttar Pradesh,Lucknow,Railway,195.6,674,2,40,91.7,1,0,80.9,22,95.0,100.0,17,0.565,319,420,101,Notification,Documentation,1,64.8,Medium
+LA1084,Bihar,Araria,Industrial Corridor,167.3,325,0,35,95.3,1,0,91.7,23,100.0,100.0,14,0.23,347,352,5,None,None,0,32.9,Low
+LA1085,Kerala,Thrissur,Expressway,91.8,179,0,37,100.0,1,0,84.0,18,70.6,47.6,4,0.463,334,523,189,R&R,R&R Bottleneck,1,83.9,High
+LA1086,Andhra Pradesh,Guntur,Metro,218.0,303,3,31,69.5,3,0,82.8,26,98.7,72.9,21,0.121,401,508,107,Notification,Documentation,1,72.7,High
+LA1087,Tamil Nadu,Coimbatore,Expressway,141.3,546,2,83,81.8,5,0,60.2,54,57.6,65.9,20,0.255,346,545,199,Notification,Documentation,1,96.7,High
+LA1088,Uttar Pradesh,Kanpur,Highway,386.3,1621,0,14,63.7,2,0,81.5,44,87.6,86.6,1,0.567,457,662,205,Approval,Pending Approval,1,95.9,High
+LA1089,Maharashtra,Nashik,Metro,72.0,205,0,67,89.1,3,0,75.3,14,81.9,80.1,12,0.39,520,642,122,Notification,Documentation,1,77.3,High
+LA1090,Madhya Pradesh,Bhopal,Highway,77.1,142,0,28,97.8,2,0,70.9,40,67.7,65.8,12,0.144,353,355,2,None,None,0,48.5,Medium
+LA1091,Madhya Pradesh,Bhopal,Industrial Corridor,127.6,158,1,37,80.2,3,0,75.2,40,87.4,100.0,7,0.256,473,585,112,Notification,Documentation,1,77.8,High
+LA1092,Karnataka,Bengaluru Rural,Railway,90.2,286,0,0,96.4,2,0,72.7,12,64.4,51.7,15,0.063,385,395,10,None,None,0,46.2,Medium
+LA1093,Karnataka,Mysuru,Industrial Corridor,118.7,406,0,24,100.0,2,0,79.1,30,55.8,50.7,21,0.377,288,292,4,None,None,0,81.4,High
+LA1094,Andhra Pradesh,Guntur,Highway,352.4,486,1,30,70.6,5,0,52.0,68,16.7,36.5,8,0.212,197,369,172,Possession,Ownership Conflict,1,100.0,High
+LA1095,Maharashtra,Pune,Metro,25.6,52,1,73,92.8,5,0,73.7,23,51.0,59.4,5,0.308,353,568,215,Notification,Documentation,1,100.0,High
+LA1096,Bihar,Araria,Expressway,13.4,15,2,75,96.7,1,0,100.0,21,84.5,69.0,11,0.281,299,299,0,None,None,0,70.6,High
+LA1097,Odisha,Nayagarh,Highway,195.6,706,1,14,98.6,1,0,58.2,83,62.3,65.9,9,0.338,190,358,168,Approval,Pending Approval,1,97.0,High
+LA1098,Tamil Nadu,Madurai,Railway,133.5,487,4,67,78.7,2,0,88.3,0,64.7,78.7,29,0.349,414,576,162,Notification,Documentation,1,90.7,High
+LA1099,Maharashtra,Pune,Highway,33.6,109,3,52,94.2,3,0,80.6,9,70.1,45.0,13,0.251,487,657,170,R&R,R&R Bottleneck,1,97.7,High
+LA1100,Tamil Nadu,Salem,Highway,46.1,137,2,18,74.6,2,0,56.4,65,49.9,69.9,25,0.094,332,524,192,Possession,Legal Dispute,1,95.1,High
+LA1101,Madhya Pradesh,Bhopal,Railway,77.5,260,2,27,65.0,1,0,74.2,18,56.1,54.8,16,0.158,304,528,224,R&R,R&R Bottleneck,1,94.5,High
+LA1102,Andhra Pradesh,Krishna,Metro,173.3,423,3,15,74.7,3,0,64.9,55,79.7,65.6,20,0.054,448,654,206,Approval,Pending Approval,1,94.1,High
+LA1103,Madhya Pradesh,Bhopal,Expressway,144.5,183,4,64,91.7,2,0,90.1,0,56.1,59.4,13,0.041,350,408,58,Notification,Documentation,1,37.8,Low
+LA1104,Telangana,Hyderabad,Highway,69.7,115,5,116,63.8,5,0,96.4,0,100.0,100.0,29,0.088,312,524,212,Notification,Documentation,1,91.1,High
+LA1105,Telangana,Warangal,Highway,236.8,951,4,73,90.7,2,0,52.2,63,50.2,56.3,19,0.245,283,474,191,Notification,Documentation,1,89.4,High
+LA1106,Andhra Pradesh,Krishna,Expressway,64.6,150,0,0,84.3,3,0,52.5,87,39.0,35.8,19,0.124,537,731,194,R&R,R&R Bottleneck,1,94.6,High
+LA1107,Kerala,Thrissur,Highway,58.3,89,1,13,96.0,5,0,64.2,70,45.9,29.8,9,0.434,360,559,199,R&R,R&R Bottleneck,1,99.5,High
+LA1108,Tamil Nadu,Madurai,Highway,146.5,508,5,108,65.4,6,1,79.5,20,56.7,70.5,51,0.143,558,714,156,Compensation,Compensation Delay,1,97.6,High
+LA1109,Bihar,Araria,Railway,130.5,484,3,43,68.5,4,0,76.6,28,62.3,54.0,26,0.284,376,600,224,R&R,R&R Bottleneck,1,100.0,High
+LA1110,Odisha,Nayagarh,Railway,117.5,350,1,17,85.5,6,0,72.2,34,40.7,17.9,24,0.261,458,611,153,R&R,R&R Bottleneck,1,100.0,High
+LA1111,Madhya Pradesh,Indore,Metro,58.7,188,2,66,68.2,2,0,68.6,16,74.5,88.3,20,0.299,260,457,197,Notification,Documentation,1,93.5,High
+LA1112,Bihar,Araria,Metro,140.0,537,5,77,60.9,0,0,87.9,27,97.7,74.4,22,0.271,483,690,207,Notification,Documentation,1,85.6,High
+LA1113,Odisha,Khordha,Railway,28.8,64,0,0,100.0,1,0,96.0,31,100.0,89.3,16,0.647,331,342,11,None,None,0,10.9,Low
+LA1114,Karnataka,Belagavi,Metro,129.4,198,3,56,68.6,2,0,74.7,26,99.8,100.0,23,0.233,257,451,194,Notification,Documentation,1,95.6,High
+LA1115,Telangana,Warangal,Industrial Corridor,281.8,601,0,58,87.3,0,0,79.2,41,83.4,84.4,14,0.362,266,453,187,Notification,Documentation,1,97.1,High
+LA1116,Odisha,Khordha,Railway,64.3,264,3,55,69.3,1,0,81.3,0,75.6,40.0,15,0.126,323,464,141,R&R,R&R Bottleneck,1,82.8,High
+LA1117,Andhra Pradesh,Krishna,Expressway,68.8,259,0,3,87.7,3,0,67.3,45,100.0,100.0,4,0.454,465,530,65,Approval,Pending Approval,1,45.2,Medium
+LA1118,Uttar Pradesh,Kanpur,Railway,100.8,347,1,13,58.6,4,0,100.0,0,95.9,78.0,27,0.396,555,714,159,Compensation,Compensation Delay,1,91.8,High
+LA1119,Odisha,Nayagarh,Highway,50.4,142,1,44,77.9,5,0,67.9,61,49.7,31.8,15,0.415,243,417,174,R&R,R&R Bottleneck,1,100.0,High
+LA1120,Telangana,Warangal,Highway,109.1,328,1,44,63.1,0,0,77.2,42,76.8,60.0,6,0.192,360,494,134,Notification,Documentation,1,83.8,High
+LA1121,Karnataka,Mysuru,Metro,40.8,128,2,62,65.7,5,0,88.2,8,45.4,42.8,20,0.259,575,801,226,Notification,Documentation,1,99.8,High
+LA1122,Bihar,Supaul,Industrial Corridor,35.4,120,1,12,77.8,1,0,59.4,72,84.6,59.9,16,0.575,439,687,248,Approval,Pending Approval,1,93.9,High
+LA1123,Tamil Nadu,Chennai,Highway,222.2,419,0,17,96.5,0,0,79.2,27,82.9,52.9,7,0.248,294,294,0,None,None,0,24.7,Low
+LA1124,Kerala,Ernakulam,Highway,79.3,298,2,80,92.7,1,0,73.4,32,56.2,53.9,16,0.383,251,460,209,Notification,Documentation,1,100.0,High
+LA1125,Bihar,Supaul,Highway,68.9,116,0,21,78.9,4,0,80.8,37,61.4,43.2,11,0.077,462,661,199,R&R,R&R Bottleneck,1,96.9,High
+LA1126,Bihar,Supaul,Railway,66.8,236,0,0,81.0,1,0,95.4,6,85.9,61.5,11,0.329,380,513,133,R&R,R&R Bottleneck,1,64.2,Medium
+LA1127,Tamil Nadu,Coimbatore,Railway,200.7,342,3,58,57.3,1,0,78.2,31,83.4,69.2,19,0.03,371,546,175,Notification,Documentation,1,93.3,High
+LA1128,Odisha,Khordha,Metro,101.2,126,2,58,84.0,2,0,88.4,10,71.9,98.1,11,0.176,399,493,94,Notification,Documentation,1,68.9,Medium
+LA1129,Karnataka,Belagavi,Highway,50.9,187,0,0,65.4,1,0,74.1,29,62.5,36.5,1,0.246,321,384,63,R&R,R&R Bottleneck,1,85.4,High
+LA1130,Bihar,Araria,Railway,139.4,284,0,0,100.0,4,0,67.6,30,73.3,98.0,20,0.147,222,287,65,Compensation,Compensation Delay,1,77.9,High
+LA1131,Karnataka,Mysuru,Railway,222.3,737,3,54,71.4,0,0,71.7,46,63.5,56.4,19,0.213,347,505,158,Notification,Documentation,1,99.8,High
+LA1132,Madhya Pradesh,Bhopal,Highway,83.2,99,3,60,62.0,0,0,86.9,0,82.0,64.4,10,0.23,380,499,119,Notification,Documentation,1,75.3,High
+LA1133,Odisha,Khordha,Expressway,151.9,387,2,68,73.3,4,0,63.6,46,54.2,54.8,27,0.487,222,437,215,Notification,Documentation,1,99.4,High
+LA1134,Uttar Pradesh,Kanpur,Metro,70.5,105,3,86,84.9,3,0,100.0,0,63.9,71.7,7,0.184,389,592,203,Notification,Documentation,1,93.4,High
+LA1135,Karnataka,Bengaluru Rural,Expressway,67.1,212,3,79,59.4,3,0,72.1,58,77.2,77.3,14,0.098,319,480,161,Notification,Documentation,1,87.2,High
+LA1136,Maharashtra,Pune,Metro,230.0,358,3,11,77.8,2,0,96.1,8,79.3,85.6,18,0.142,574,584,10,None,None,0,74.0,High
+LA1137,Maharashtra,Nashik,Industrial Corridor,50.8,158,2,32,71.0,3,0,97.6,6,100.0,91.1,11,0.324,264,433,169,Notification,Documentation,1,87.9,High
+LA1138,Bihar,Supaul,Industrial Corridor,133.7,170,2,108,66.1,0,0,77.1,19,72.5,93.0,1,0.413,549,688,139,Notification,Documentation,1,86.4,High
+LA1139,Kerala,Thrissur,Highway,277.5,899,4,87,67.4,2,0,55.9,56,36.2,51.4,39,0.389,486,742,256,Notification,Documentation,1,99.8,High
+LA1140,Maharashtra,Nashik,Metro,43.9,169,0,26,98.1,6,1,85.2,20,78.8,77.5,18,0.246,449,574,125,Compensation,Compensation Delay,1,70.3,High
+LA1141,Tamil Nadu,Salem,Highway,90.0,120,0,8,91.1,0,0,85.5,43,100.0,54.2,2,0.054,307,353,46,R&R,R&R Bottleneck,1,37.2,Low
+LA1142,Maharashtra,Pune,Highway,43.5,145,1,28,100.0,4,0,95.9,7,75.2,66.5,21,0.191,281,291,10,None,None,0,80.9,High
+LA1143,Maharashtra,Nashik,Highway,394.0,1438,3,51,81.6,0,0,73.8,41,33.3,40.6,18,0.122,290,427,137,Possession,Legal Dispute,1,100.0,High
+LA1144,Telangana,Warangal,Railway,77.3,130,1,53,88.3,3,0,86.3,24,97.9,100.0,24,0.351,428,597,169,Notification,Documentation,1,62.1,Medium
+LA1145,Madhya Pradesh,Indore,Metro,83.7,127,1,18,78.6,2,0,80.0,43,70.0,65.3,5,0.328,384,503,119,R&R,R&R Bottleneck,1,72.4,High
+LA1146,Uttar Pradesh,Kanpur,Highway,31.0,66,3,62,85.8,0,0,54.4,41,82.7,30.2,15,0.24,211,399,188,R&R,R&R Bottleneck,1,88.5,High
+LA1147,Karnataka,Bengaluru Rural,Railway,152.9,188,1,34,89.0,2,0,76.8,35,71.8,75.8,10,0.544,412,594,182,Notification,Documentation,1,92.3,High
+LA1148,Karnataka,Belagavi,Highway,21.4,56,1,60,74.3,1,0,100.0,0,79.2,70.6,27,0.092,353,436,83,Notification,Documentation,1,68.2,Medium
+LA1149,Kerala,Ernakulam,Highway,197.0,552,2,34,86.6,2,0,94.4,0,65.3,66.5,34,0.058,435,567,132,Possession,Legal Dispute,1,85.4,High
+LA1150,Karnataka,Mysuru,Highway,71.1,217,1,23,86.3,3,0,65.3,28,45.5,23.5,11,0.401,541,713,172,R&R,R&R Bottleneck,1,100.0,High
+LA1151,Madhya Pradesh,Bhopal,Railway,57.3,130,1,15,97.4,2,0,99.7,37,72.0,89.7,22,0.096,401,518,117,Possession,Legal Dispute,1,67.0,Medium
+LA1152,Maharashtra,Nashik,Highway,141.8,160,4,66,70.0,2,0,70.9,30,52.4,46.1,26,0.382,293,505,212,Notification,Documentation,1,97.6,High
+LA1153,Bihar,Supaul,Highway,118.4,438,2,53,75.0,1,0,81.3,11,61.5,61.2,17,0.426,413,413,0,None,None,0,92.8,High
+LA1154,Tamil Nadu,Coimbatore,Metro,45.6,91,2,48,78.7,5,0,81.1,31,59.5,69.7,28,0.384,342,490,148,Compensation,Compensation Delay,1,98.4,High
+LA1155,Madhya Pradesh,Indore,Metro,232.7,461,5,43,86.5,2,0,77.8,33,57.6,33.2,17,0.288,470,652,182,R&R,R&R Bottleneck,1,99.3,High
+LA1156,Karnataka,Bengaluru Rural,Highway,39.0,59,1,38,81.8,0,0,71.2,27,32.6,47.0,11,0.03,272,493,221,Possession,Legal Dispute,1,96.9,High
+LA1157,Tamil Nadu,Madurai,Expressway,185.7,470,1,0,91.0,5,0,100.0,12,74.1,49.9,11,0.304,396,575,179,R&R,R&R Bottleneck,1,76.9,High
+LA1158,Bihar,Araria,Metro,84.7,285,5,65,62.5,3,0,80.6,30,78.5,91.9,24,0.508,217,370,153,Notification,Documentation,1,92.0,High
+LA1159,Maharashtra,Nashik,Railway,56.3,228,0,17,77.4,1,0,68.1,35,70.7,49.7,12,0.385,342,518,176,R&R,R&R Bottleneck,1,91.9,High
+LA1160,Tamil Nadu,Salem,Industrial Corridor,80.9,154,1,40,93.3,1,0,50.5,56,34.1,55.1,13,0.266,340,503,163,Possession,Legal Dispute,1,93.4,High
+LA1161,Odisha,Nayagarh,Highway,92.0,336,2,89,95.7,3,0,78.1,39,80.8,84.3,19,0.204,490,613,123,Notification,Documentation,1,95.6,High
+LA1162,Tamil Nadu,Coimbatore,Industrial Corridor,149.9,597,4,114,50.0,2,0,47.5,62,22.5,19.9,17,0.269,388,521,133,Notification,Documentation,1,100.0,High
+LA1163,Uttar Pradesh,Kanpur,Highway,143.8,301,0,11,100.0,2,0,100.0,0,92.5,94.1,15,0.582,659,665,6,None,None,0,51.3,Medium
+LA1164,Andhra Pradesh,Guntur,Expressway,82.0,171,3,77,77.4,3,0,92.7,3,100.0,100.0,25,0.293,548,660,112,Notification,Documentation,1,74.5,High
+LA1165,Maharashtra,Nashik,Metro,72.1,209,1,30,75.6,3,0,76.2,67,81.1,96.7,23,0.03,212,380,168,Notification,Documentation,1,77.9,High
+LA1166,Maharashtra,Pune,Industrial Corridor,311.1,1162,1,34,84.3,1,0,95.0,0,100.0,99.4,3,0.084,516,526,10,None,None,0,15.2,Low
+LA1167,Andhra Pradesh,Guntur,Highway,68.0,180,5,67,77.0,1,0,67.9,62,68.0,65.3,23,0.164,478,629,151,Notification,Documentation,1,99.7,High
+LA1168,Tamil Nadu,Coimbatore,Railway,130.2,389,2,24,82.4,2,0,50.8,61,33.6,14.9,30,0.538,365,479,114,R&R,R&R Bottleneck,1,98.9,High
+LA1169,Odisha,Nayagarh,Highway,262.0,668,0,31,88.2,2,0,89.1,2,83.1,65.2,6,0.486,494,610,116,R&R,R&R Bottleneck,1,68.2,Medium
+LA1170,Kerala,Ernakulam,Railway,27.0,54,0,41,80.2,6,0,70.1,20,12.7,5.0,21,0.363,387,547,160,R&R,R&R Bottleneck,1,96.1,High
+LA1171,Madhya Pradesh,Bhopal,Railway,48.8,51,3,60,80.6,1,0,86.9,40,92.1,100.0,17,0.347,255,266,11,None,None,0,83.8,High
+LA1172,Maharashtra,Pune,Highway,138.7,557,2,26,91.7,2,0,79.1,17,91.0,40.0,17,0.319,339,518,179,R&R,R&R Bottleneck,1,51.9,Medium
+LA1173,Odisha,Nayagarh,Metro,51.4,91,3,24,65.9,2,0,56.4,63,63.0,95.1,23,0.55,276,430,154,Approval,Pending Approval,1,92.8,High
+LA1174,Tamil Nadu,Madurai,Metro,104.1,328,0,47,99.0,0,0,77.0,40,51.0,48.1,8,0.343,381,381,0,None,None,0,64.4,Medium
+LA1175,Uttar Pradesh,Lucknow,Metro,141.3,274,5,82,74.3,1,0,89.7,0,61.5,78.9,25,0.295,343,514,171,Notification,Documentation,1,90.2,High
+LA1176,Uttar Pradesh,Lucknow,Highway,31.2,66,2,40,81.1,1,0,89.7,7,67.3,61.0,21,0.556,518,525,7,None,None,0,89.7,High
+LA1177,Uttar Pradesh,Lucknow,Expressway,139.9,165,1,35,93.7,2,0,83.8,32,100.0,87.8,22,0.548,355,479,124,Notification,Documentation,1,91.1,High
+LA1178,Tamil Nadu,Madurai,Expressway,132.0,419,4,75,91.3,4,0,83.2,20,72.8,62.2,20,0.37,384,398,14,None,None,0,71.4,High
+LA1179,Andhra Pradesh,Guntur,Expressway,62.7,99,1,26,93.7,2,0,100.0,3,100.0,77.4,11,0.534,486,690,204,Notification,Documentation,1,92.9,High
+LA1180,Uttar Pradesh,Kanpur,Highway,319.9,599,1,41,82.7,2,0,74.1,17,60.7,31.9,1,0.303,448,615,167,R&R,R&R Bottleneck,1,97.8,High
+LA1181,Telangana,Hyderabad,Metro,125.3,137,2,38,92.1,1,0,61.1,34,46.4,33.8,6,0.107,295,434,139,R&R,R&R Bottleneck,1,92.0,High
+LA1182,Uttar Pradesh,Kanpur,Highway,44.2,77,3,70,78.2,1,0,81.0,28,83.8,81.7,12,0.03,379,387,8,None,None,0,46.9,Medium
+LA1183,Maharashtra,Nashik,Railway,87.3,170,1,26,79.5,2,0,84.3,0,77.7,89.4,3,0.385,364,375,11,None,None,0,49.6,Medium
+LA1184,Andhra Pradesh,Guntur,Expressway,26.2,48,2,47,81.9,3,0,66.6,41,74.2,76.0,13,0.064,466,672,206,Notification,Documentation,1,85.9,High
+LA1185,Andhra Pradesh,Guntur,Railway,543.5,2165,1,41,70.3,4,0,41.8,68,11.5,11.4,11,0.195,448,630,182,R&R,R&R Bottleneck,1,99.5,High
+LA1186,Madhya Pradesh,Indore,Expressway,235.6,949,1,31,82.0,6,1,82.0,43,50.6,53.3,12,0.426,246,407,161,Compensation,Compensation Delay,1,93.2,High
+LA1187,Odisha,Nayagarh,Highway,143.7,155,3,30,100.0,4,0,90.4,21,80.4,58.0,20,0.133,169,175,6,None,None,0,84.0,High
+LA1188,Tamil Nadu,Madurai,Expressway,170.3,657,2,72,90.5,1,0,72.1,1,72.9,85.6,4,0.503,428,597,169,Notification,Documentation,1,91.6,High
+LA1189,Tamil Nadu,Chennai,Railway,135.7,472,1,22,83.8,0,0,76.5,19,66.3,46.5,17,0.219,461,461,0,None,None,0,83.8,High
+LA1190,Tamil Nadu,Coimbatore,Highway,38.0,104,1,47,57.3,0,0,100.0,0,100.0,100.0,30,0.136,444,601,157,Notification,Documentation,1,84.8,High
+LA1191,Karnataka,Bengaluru Rural,Highway,39.4,66,0,10,85.4,1,0,65.4,15,49.3,79.3,7,0.227,420,423,3,None,None,0,57.3,Medium
+LA1192,Odisha,Nayagarh,Highway,114.5,207,0,36,92.1,3,0,76.5,29,65.7,42.6,14,0.152,266,430,164,R&R,R&R Bottleneck,1,92.2,High
+LA1193,Madhya Pradesh,Bhopal,Industrial Corridor,57.6,179,4,53,66.9,0,0,73.3,47,63.9,45.4,19,0.145,456,646,190,R&R,R&R Bottleneck,1,98.0,High
+LA1194,Madhya Pradesh,Bhopal,Industrial Corridor,195.5,421,2,10,87.0,0,0,100.0,5,81.8,47.9,8,0.349,250,262,12,None,None,0,31.1,Low
+LA1195,Bihar,Araria,Highway,65.6,267,4,46,94.7,1,0,100.0,0,100.0,87.6,26,0.239,284,432,148,Notification,Documentation,1,53.3,Medium
+LA1196,Odisha,Khordha,Railway,155.2,256,3,120,70.1,5,0,73.6,12,68.1,60.0,25,0.196,602,777,175,Notification,Documentation,1,100.0,High
+LA1197,Uttar Pradesh,Lucknow,Railway,74.9,279,2,40,79.2,4,0,85.0,19,77.3,55.3,18,0.206,366,578,212,R&R,R&R Bottleneck,1,91.0,High
+LA1198,Kerala,Thrissur,Highway,75.5,316,5,90,59.1,2,0,83.0,3,98.4,100.0,17,0.165,202,327,125,Notification,Documentation,1,90.5,High
+LA1199,Odisha,Khordha,Highway,87.3,245,3,15,97.1,1,0,84.5,52,81.1,100.0,21,0.125,470,627,157,Possession,Legal Dispute,1,66.7,Medium
+LA1200,Telangana,Hyderabad,Metro,142.0,566,1,37,95.1,3,0,81.7,26,74.1,54.6,18,0.339,396,550,154,R&R,R&R Bottleneck,1,91.8,High

@@ -30,7 +30,7 @@ def train_and_evaluate():
     # 2. Split features and targets
     X = df[CATEGORICAL_FEATURES + NUMERICAL_FEATURES]
     y_class = df["delayed"]
-    y_reg = df["actual_delay_days"]
+    y_reg = df["delay_days"] if "delay_days" in df.columns else df["actual_delay_days"]
     
     # 3. Train-test split
     # Split using same random state to keep classifications and regressions aligned

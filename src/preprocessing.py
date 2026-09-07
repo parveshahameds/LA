@@ -3,29 +3,23 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.pipeline import Pipeline
 
-CATEGORICAL_FEATURES = ["project_type", "state", "district", "current_stage", "notification_status"]
+CATEGORICAL_FEATURES = ["project_type", "state", "district"]
 
 NUMERICAL_FEATURES = [
-    "land_area_acres",
+    "land_area_ha",
     "affected_families",
-    "planned_duration_days",
-    "current_elapsed_days",
-    "documentation_completion_pct",
-    "approval_delay_days",
     "pending_approvals",
-    "compensation_approved_pct",
-    "compensation_paid_pct",
-    "compensation_pending_families",
-    "legal_disputes",
-    "average_dispute_age_days",
-    "ownership_conflicts",
-    "rr_progress_pct",
-    "rehabilitation_pending_families",
+    "approval_delay_days",
+    "documentation_pct",
+    "legal_cases",
+    "court_stay",
+    "compensation_pct",
+    "compensation_delay_days",
     "possession_pct",
-    "stakeholder_response_days",
-    "department_backlog",
-    "historical_district_delay_rate",
-    "historical_project_type_delay_rate"
+    "rr_progress_pct",
+    "stakeholder_delay_days",
+    "historical_delay_rate",
+    "planned_days"
 ]
 
 def get_preprocessing_pipeline():

@@ -16,24 +16,17 @@ def simulate_intervention(project_row, modifications, classifier, regressor, pre
     
     # Apply modifications
     for k, v in modifications.items():
-        if k in modified_dict:
-            modified_dict[k] = v
-            
-    # Adjust dependent variables to maintain correlation consistency
-    if "compensation_paid_pct" in modifications and "affected_families" in modified_dict:
-        paid_pct = modifications["compensation_paid_pct"]
-        affected = modified_dict["affected_families"]
-        modified_dict["compensation_pending_families"] = int(affected * (1.0 - paid_pct / 100.0))
+        modified_dict[k] = v
         
-    if "rr_progress_pct" in modifications and "affected_families" in modified_dict:
-        rr_pct = modifications["rr_progress_pct"]
-        affected = modified_dict["affected_families"]
-        modified_dict["rehabilitation_pending_families"] = int(affected * (1.0 - rr_pct / 100.0))
-        
-    if "legal_disputes" in modifications:
-        disputes = modifications["legal_disputes"]
-        if disputes == 0:
-            modified_dict["average_dispute_age_days"] = 0.0
+    # Maintain schema aliases
+    if "compensation_pct" in modifications:
+        modified_dict["compensation_paid_pct"] = modifications["compensation_pct"]
+    if "legal_cases" in modifications:
+        modified_dict["legal_disputes"] = modifications["legal_cases"]
+        if modifications["legal_cases"] == 0:
+            modified_dict["court_stay"] = 0
+    if "documentation_pct" in modifications:
+        modified_dict["documentation_completion_pct"] = modifications["documentation_pct"]
             
     # Convert to DataFrame for inference
     df_instance = pd.DataFrame([modified_dict])

@@ -8,26 +8,25 @@ from preprocessing import CATEGORICAL_FEATURES, NUMERICAL_FEATURES, get_feature_
 
 # Map raw feature names to clean public-facing names
 FEATURE_LABEL_MAP = {
+    "compensation_pct": "Compensation Disbursed %",
+    "compensation_delay_days": "Compensation Delay (Days)",
+    "legal_cases": "Active Legal Cases",
+    "court_stay": "Active Court Stay Injunction",
+    "approval_delay_days": "Administrative Approval Delay (Days)",
+    "pending_approvals": "Pending Approvals Count",
+    "documentation_pct": "Documentation Completion %",
+    "rr_progress_pct": "Rehabilitation & Resettlement Progress %",
+    "possession_pct": "Land Possession Handover %",
+    "stakeholder_delay_days": "Stakeholder Delay (Days)",
+    "historical_delay_rate": "Historical District Delay Rate",
+    "affected_families": "Affected Families Count",
+    "land_area_ha": "Land Acquisition Area (Hectares)",
+    "planned_days": "Planned Project Duration (Days)",
     "compensation_paid_pct": "Compensation Paid %",
     "legal_disputes": "Legal Disputes Count",
-    "approval_delay_days": "Administrative Approval Delay",
     "documentation_completion_pct": "Documentation Completion %",
-    "rr_progress_pct": "Rehabilitation & Resettlement Progress",
-    "department_backlog": "Department Case Backlog",
-    "stakeholder_response_days": "Stakeholder Response Time",
-    "affected_families": "Affected Families Count",
     "land_area_acres": "Land Area (Acres)",
-    "pending_approvals": "Pending Approvals Count",
-    "compensation_approved_pct": "Compensation Approved %",
-    "compensation_pending_families": "Compensation Pending Families",
-    "average_dispute_age_days": "Average Dispute Age (Days)",
-    "ownership_conflicts": "Land Ownership Conflicts",
-    "rehabilitation_pending_families": "Rehabilitation Pending Families",
-    "possession_pct": "Possession Progress %",
-    "historical_district_delay_rate": "Historical District Delay Rate",
-    "historical_project_type_delay_rate": "Historical Project Type Delay Rate",
-    "planned_duration_days": "Planned Project Duration",
-    "current_elapsed_days": "Elapsed Project Days"
+    "planned_duration_days": "Planned Project Duration"
 }
 
 def clean_feature_name_and_value(feat_name, val):

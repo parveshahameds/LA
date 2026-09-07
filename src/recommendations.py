@@ -12,21 +12,21 @@ def generate_recommendations(top_drivers, project_row):
         }
         
     recommendations_pool = {
-        "Compensation Paid %": "Prioritize disbursement of outstanding compensation. Establish local camp offices in the district to expedite pending family payments.",
-        "Compensation Pending Families": "Establish local camp offices in the district to expedite pending family payments.",
-        "Legal Disputes Count": "Engage district mediation officers to fast-track dispute resolutions and settle ownership conflicts outside of courts.",
-        "Average Dispute Age (Days)": "Establish dedicated fast-track tribunals or legal committees for resolving long-standing land litigation cases.",
-        "Administrative Approval Delay": "Escalate pending clearances to the State Coordination Committee. Conduct a joint department review to resolve documentation bottlenecks.",
-        "Pending Approvals Count": "Deploy an inter-departmental task force to expedite clearance of outstanding administrative approvals.",
-        "Documentation Completion %": "Deploy additional surveying teams to digitize local land records and complete pending land survey filings.",
-        "Rehabilitation & Resettlement Progress": "Accelerate site allocations for resettlement and execute critical rehabilitation schemes before initiating possession.",
-        "Rehabilitation Pending Families": "Prioritize rehabilitation site allocation and support packages for the pending affected families.",
-        "Department Case Backlog": "Temporarily reallocate administrative staff to the district office to clear the backlog of pending land files.",
-        "Stakeholder Response Time": "Setup a direct coordination cell with project stakeholders and local panchayats to reduce communication turnaround times.",
-        "Land Ownership Conflicts": "Initiate joint boundary demarcation audits and verify revenue records to settle conflicting ownership claims.",
-        "Possession Progress %": "Coordinate with local administrative officers to conduct the formal possession proceedings after completing compensation disbursements."
-    }
-    
+    "Compensation Disbursed %": "Prioritize disbursement of outstanding compensation. Establish local camp offices in the district to expedite pending family payments.",
+    "Compensation Paid %": "Prioritize disbursement of outstanding compensation. Establish local camp offices in the district to expedite pending family payments.",
+    "Compensation Delay (Days)": "Expedite award inquiry and fund transfer to escrow accounts to eliminate compensation disbursement delays.",
+    "Active Court Stay Injunction": "URGENT: File an expedited petition in the High Court for vacating stay orders and engage Special Government Pleaders.",
+    "Active Legal Cases": "Engage district mediation officers to fast-track dispute resolutions and settle ownership conflicts outside of courts.",
+    "Legal Disputes Count": "Engage district mediation officers to fast-track dispute resolutions and settle ownership conflicts outside of courts.",
+    "Administrative Approval Delay": "Escalate pending clearances to the State Coordination Committee. Conduct a joint department review to resolve documentation bottlenecks.",
+    "Pending Approvals Count": "Deploy an inter-departmental task force to expedite clearance of outstanding administrative approvals.",
+    "Documentation Completion %": "Deploy additional surveying teams to digitize local land records and complete pending land survey filings.",
+    "Rehabilitation & Resettlement Progress": "Accelerate site allocations for resettlement and execute critical rehabilitation schemes before initiating possession.",
+    "Land Possession Handover %": "Coordinate with district revenue authorities and law enforcement to complete formal possession proceedings.",
+    "Possession Progress %": "Coordinate with local administrative officers to conduct the formal possession proceedings after completing compensation disbursements.",
+    "Stakeholder Delay (Days)": "Setup a direct coordination cell with project implementing agencies to streamline stakeholder reviews."
+}
+
     actions = []
     for driver in risk_drivers:
         feature_name = driver["feature"]
@@ -35,22 +35,26 @@ def generate_recommendations(top_drivers, project_row):
         matched_action = None
         for key, rec_text in recommendations_pool.items():
             if key in feature_name:
-                # Customize recommendation text if specific features have values we want to mention
-                if key == "Compensation Paid %" and "compensation_paid_pct" in project_row:
-                    val = project_row["compensation_paid_pct"]
-                    matched_action = f"Compensation payout is lagging at {val}%. Prioritize disbursement of outstanding compensation and establish local camp offices to expedite pending payments."
-                elif key == "Legal Disputes Count" and "legal_disputes" in project_row:
-                    val = int(project_row["legal_disputes"])
-                    matched_action = f"There are {val} active legal disputes. Engage district mediation officers to fast-track resolutions and settle ownership conflicts outside of courts."
-                elif key == "Administrative Approval Delay" and "approval_delay_days" in project_row:
+                if "Court Stay" in key:
+                    matched_action = "URGENT: Court stay injunction is active. Mobilize legal team to file for vacation of stay in High Court."
+                elif "Legal" in key and ("legal_cases" in project_row or "legal_disputes" in project_row):
+                    val = int(project_row.get("legal_cases", project_row.get("legal_disputes", 1)))
+                    matched_action = f"There are {val} active legal cases. Convene district fast-track mediation to resolve disputes outside litigation."
+                elif "Compensation Delay" in key and "compensation_delay_days" in project_row:
+                    val = int(project_row["compensation_delay_days"])
+                    matched_action = f"Compensation disbursement is delayed by {val} days. Issue treasury clearance directives immediately."
+                elif "Compensation" in key and ("compensation_pct" in project_row or "compensation_paid_pct" in project_row):
+                    val = project_row.get("compensation_pct", project_row.get("compensation_paid_pct", 50))
+                    matched_action = f"Compensation payout is lagging at {val}%. Prioritize fund disbursements to eliminate landowner opposition."
+                elif "Approval" in key and "approval_delay_days" in project_row:
                     val = int(project_row["approval_delay_days"])
-                    matched_action = f"Administrative approval delay has reached {val} days. Escalate pending clearances to the State Coordination Committee."
-                elif key == "Documentation Completion %" and "documentation_completion_pct" in project_row:
-                    val = project_row["documentation_completion_pct"]
-                    matched_action = f"Documentation completion is low at {val}%. Deploy additional surveying teams to digitize local land records and complete land filings."
-                elif key == "Rehabilitation & Resettlement Progress" and "rr_progress_pct" in project_row:
+                    matched_action = f"Administrative approvals delayed by {val} days. Schedule urgent State Clearance Committee hearing."
+                elif "Documentation" in key and ("documentation_pct" in project_row or "documentation_completion_pct" in project_row):
+                    val = project_row.get("documentation_pct", project_row.get("documentation_completion_pct", 50))
+                    matched_action = f"Documentation completion is at {val}%. Deploy revenue survey teams to expedite land titling."
+                elif "Rehabilitation" in key and "rr_progress_pct" in project_row:
                     val = project_row["rr_progress_pct"]
-                    matched_action = f"R&R progress is lagging at {val}%. Accelerate site allocations and execute critical rehabilitation schemes before initiating possession."
+                    matched_action = f"R&R progress is at {val}%. Accelerate resettlement plot allocations before demanding land possession."
                 else:
                     matched_action = rec_text
                 break

@@ -153,17 +153,17 @@ if model_loaded:
         active_cnt = len(curr_pred)
         high_risk_cnt = len(curr_pred[curr_pred["risk_category"] == "HIGH"])
         crit_risk_cnt = len(curr_pred[curr_pred["risk_category"] == "CRITICAL"])
-        total_land = curr_pred["land_area_acres"].sum()
+        total_land = curr_pred["land_area_ha"].sum() if "land_area_ha" in curr_pred.columns else curr_pred["land_area_acres"].sum()
         total_families = curr_pred["affected_families"].sum()
         
         with col1:
-            st.markdown(f"<div class='metric-card'><div class='metric-value'>{active_cnt}</div><div class='metric-label'>Active Projects</div></div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='metric-card'><div class='metric-value'>{active_cnt}</div><div class='metric-label'>Monitored Projects</div></div>", unsafe_allow_html=True)
         with col2:
             st.markdown(f"<div class='metric-card'><div class='metric-value' style='color:#f97316;'>{high_risk_cnt}</div><div class='metric-label'>High-Risk Projects</div></div>", unsafe_allow_html=True)
         with col3:
             st.markdown(f"<div class='metric-card'><div class='metric-value' style='color:#ef4444;'>{crit_risk_cnt}</div><div class='metric-label'>Critical Projects</div></div>", unsafe_allow_html=True)
         with col4:
-            st.markdown(f"<div class='metric-card'><div class='metric-value'>{total_land:,.0f}</div><div class='metric-label'>Total Acres</div></div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='metric-card'><div class='metric-value'>{total_land:,.1f}</div><div class='metric-label'>Total Land (ha)</div></div>", unsafe_allow_html=True)
         with col5:
             st.markdown(f"<div class='metric-card'><div class='metric-value'>{total_families:,.0f}</div><div class='metric-label'>Affected Families</div></div>", unsafe_allow_html=True)
             
@@ -311,20 +311,27 @@ if model_loaded:
             st.markdown("### 📊 KEY STATISTICS")
             stat1, stat2 = st.columns(2)
             with stat1:
-                st.write("**Land Area:**", f"{project_row['land_area_acres']:.1f} acres")
+                area_val = project_row.get("land_area_ha", project_row.get("land_area_acres", 0.0))
+                st.write("**Land Area:**", f"{area_val:.1f} ha")
                 st.write("**Affected Families:**", f"{int(project_row['affected_families'])} families")
-                st.write("**Planned Duration:**", f"{int(project_row['planned_duration_days'])} days")
-                st.write("**Elapsed Days:**", f"{int(project_row['current_elapsed_days'])} days")
+                plan_days = project_row.get("planned_days", project_row.get("planned_duration_days", 0))
+                st.write("**Planned Duration:**", f"{int(plan_days)} days")
+                st.write("**Legal Cases / Stay:**", f"{int(project_row.get('legal_cases', project_row.get('legal_disputes', 0)))} cases | {'⚠️ Stay Active' if project_row.get('court_stay', 0) == 1 else 'No Stay'}")
             with stat2:
                 # Progress meters
-                st.write("**Documentation Progress:**")
-                st.progress(float(project_row["documentation_completion_pct"] / 100))
-                st.write("**Compensation Paid:**")
-                st.progress(float(project_row["compensation_paid_pct"] / 100))
-                st.write("**R&R Progress:**")
-                st.progress(float(project_row["rr_progress_pct"] / 100))
-                st.write("**Possession:**")
-                st.progress(float(project_row["possession_pct"] / 100))
+                doc_val = project_row.get("documentation_pct", project_row.get("documentation_completion_pct", 0.0))
+                comp_val = project_row.get("compensation_pct", project_row.get("compensation_paid_pct", 0.0))
+                rr_val = project_row.get("rr_progress_pct", 0.0)
+                poss_val = project_row.get("possession_pct", 0.0)
+                
+                st.write(f"**Documentation:** {doc_val:.1f}%")
+                st.progress(float(doc_val / 100))
+                st.write(f"**Compensation:** {comp_val:.1f}%")
+                st.progress(float(comp_val / 100))
+                st.write(f"**R&R Progress:** {rr_val:.1f}%")
+                st.progress(float(rr_val / 100))
+                st.write(f"**Possession:** {poss_val:.1f}%")
+                st.progress(float(poss_val / 100))
                 
         st.divider()
         
@@ -415,7 +422,8 @@ if model_loaded:
                 
         m_df["color"] = m_df.apply(get_rgb_color, axis=1)
         # Point sizes proportional to land area
-        m_df["radius"] = np.clip(m_df["land_area_acres"] * 10, 3000, 25000)
+        area_col = "land_area_ha" if "land_area_ha" in m_df.columns else "land_area_acres"
+        m_df["radius"] = np.clip(m_df[area_col] * 35, 3000, 25000)
         
         # PyDeck Scatterplot Layer
         scatterplot_layer = pdk.Layer(
@@ -503,10 +511,12 @@ if model_loaded:
             st.plotly_chart(fig_types, use_container_width=True)
             
         with row2_col2:
-            st.markdown("#### Legal disputes count vs Delay Probability")
-            fig_scatter = px.scatter(curr_pred, x="legal_disputes", y="delay_probability", size="land_area_acres", color="risk_category",
+            st.markdown("#### Legal Cases Count vs Delay Probability")
+            case_col = "legal_cases" if "legal_cases" in curr_pred.columns else "legal_disputes"
+            area_col = "land_area_ha" if "land_area_ha" in curr_pred.columns else "land_area_acres"
+            fig_scatter = px.scatter(curr_pred, x=case_col, y="delay_probability", size=area_col, color="risk_category",
                                      color_discrete_map={"LOW":"#22c55e","MODERATE":"#eab308","HIGH":"#f97316","CRITICAL":"#ef4444"},
-                                     labels={"legal_disputes": "Legal Disputes Count", "delay_probability": "Delay Probability (%)"},
+                                     labels={case_col: "Active Legal Cases", "delay_probability": "Delay Probability (%)"},
                                      hover_name="project_name")
             fig_scatter.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color="white"), height=300)
             st.plotly_chart(fig_scatter, use_container_width=True)
@@ -515,10 +525,11 @@ if model_loaded:
         row3_col1, row3_col2 = st.columns(2)
         
         with row3_col1:
-            st.markdown("#### Compensation Approved % vs Delay Probability")
-            fig_comp = px.scatter(curr_pred, x="compensation_approved_pct", y="delay_probability", size="affected_families", color="risk_category",
+            st.markdown("#### Compensation Disbursed % vs Delay Probability")
+            comp_col = "compensation_pct" if "compensation_pct" in curr_pred.columns else "compensation_approved_pct"
+            fig_comp = px.scatter(curr_pred, x=comp_col, y="delay_probability", size="affected_families", color="risk_category",
                                   color_discrete_map={"LOW":"#22c55e","MODERATE":"#eab308","HIGH":"#f97316","CRITICAL":"#ef4444"},
-                                  labels={"compensation_approved_pct": "Compensation Approved %", "delay_probability": "Delay Probability (%)"},
+                                  labels={comp_col: "Compensation Disbursed %", "delay_probability": "Delay Probability (%)"},
                                   hover_name="project_name")
             fig_comp.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font=dict(color="white"), height=300)
             st.plotly_chart(fig_comp, use_container_width=True)
@@ -549,12 +560,26 @@ if model_loaded:
         
         with col_sliders:
             # Inputs
-            comp_paid = st.slider("Compensation Paid Pct", 0, 100, int(project_row["compensation_paid_pct"]))
-            legal_disp = st.slider("Legal Disputes Count", 0, 25, int(project_row["legal_disputes"]))
-            approval_del = st.slider("Administrative Approval Delay (Days)", 0, 365, int(project_row["approval_delay_days"]))
-            doc_comp = st.slider("Documentation Completion Pct", 0, 100, int(project_row["documentation_completion_pct"]))
-            rr_prog = st.slider("R&R Progress Pct", 0, 100, int(project_row["rr_progress_pct"]))
-            backlog = st.slider("Department Backlog Count", 0, 150, int(project_row["department_backlog"]))
+            comp_init = int(project_row.get("compensation_pct", project_row.get("compensation_paid_pct", 50)))
+            comp_paid = st.slider("Compensation Disbursed %", 0, 100, comp_init)
+            
+            cases_init = int(project_row.get("legal_cases", project_row.get("legal_disputes", 0)))
+            legal_disp = st.slider("Active Legal Cases", 0, 15, cases_init)
+            
+            stay_init = int(project_row.get("court_stay", 0))
+            court_stay_val = st.selectbox("Court Stay Injunction Status", [0, 1], index=stay_init, format_func=lambda x: "Active Court Stay (Injunction)" if x == 1 else "No Court Stay")
+            
+            app_init = int(project_row.get("approval_delay_days", 0))
+            approval_del = st.slider("Administrative Approval Delay (Days)", 0, 180, app_init)
+            
+            doc_init = int(project_row.get("documentation_pct", project_row.get("documentation_completion_pct", 50)))
+            doc_comp = st.slider("Documentation Completion %", 0, 100, doc_init)
+            
+            rr_init = int(project_row.get("rr_progress_pct", 50))
+            rr_prog = st.slider("R&R Progress %", 0, 100, rr_init)
+            
+            poss_init = int(project_row.get("possession_pct", 50))
+            possession_val = st.slider("Land Possession %", 0, 100, poss_init)
             
         with col_outcome:
             # Current values
@@ -563,12 +588,13 @@ if model_loaded:
             
             # Predict modified outcomes
             modifications = {
-                "compensation_paid_pct": float(comp_paid),
-                "legal_disputes": int(legal_disp),
+                "compensation_pct": float(comp_paid),
+                "legal_cases": int(legal_disp),
+                "court_stay": int(court_stay_val),
                 "approval_delay_days": float(approval_del),
-                "documentation_completion_pct": float(doc_comp),
+                "documentation_pct": float(doc_comp),
                 "rr_progress_pct": float(rr_prog),
-                "department_backlog": int(backlog)
+                "possession_pct": float(possession_val)
             }
             
             sim_prob, sim_delay = simulate_intervention(
